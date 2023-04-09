@@ -1,0 +1,12 @@
+---
+source:
+  headers:
+#    PRIVATE-TOKEN: "github-secret-token"
+  urls:
+    - "https://raw.githubusercontent.com/go-micro/go-micro/master/go.mod"
+    - "https://raw.githubusercontent.com/gorilla/handlers/master/go.mod"
+whitelist:
+  - "golang.org"
+render:
+  tpl: "assets/dot.gohtml"
+  out: "out/graph.puml"
