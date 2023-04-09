@@ -1,0 +1,15 @@
+@startuml
+digraph deps{
+{{range .Items -}}
+    {{ .ID }} [
+    shape=box3d,
+    style=filled,
+    fillcolor="{{ .Color }}",
+    label="{{ .Name }}\n{{ .Used }}"
+    ]
+{{end}}
+{{- range .Links -}}
+    {{ .From }} -> {{ .To }}[label="{{ .Label }}"]
+{{end -}}
+}
+@enduml
